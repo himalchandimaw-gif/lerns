@@ -1,0 +1,44 @@
+.status-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Active state */
+.status-btn.active {
+  background: linear-gradient(135deg, #22c55e, #16a34a); /* green gradient */
+  color: #fff;
+}
+
+.status-btn.active:hover {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  transform: translateY(-2px);
+}
+
+/* Inactive state */
+.status-btn.inactive {
+  background: linear-gradient(135deg, #ef4444, #dc2626); /* red gradient */
+  color: #fff;
+}
+
+.status-btn.inactive:hover {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  transform: translateY(-2px);
+}
+
+/* Disabled (loading) */
+.status-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}

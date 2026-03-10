@@ -1,0 +1,144 @@
+/* Container */
+.scheduler-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Date picker */
+.scheduler-date {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.scheduler-date input[type="date"] {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Search input */
+.search-input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Each slot card */
+.slot-card {
+  border: 1px solid #ddd;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+/* Slot header */
+.slot-card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Lists */
+.slot-card ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+.slot-card li {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Buttons */
+.add-btn,
+.remove-btn,
+.save-btn {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-btn {
+  background-color: #28a745;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.add-btn:hover {
+  background-color: #218838;
+}
+
+.remove-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.remove-btn:hover {
+  background-color: #c82333;
+}
+
+.save-btn {
+  background-color: #0070f3;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.save-btn:hover {
+  background-color: #005bb5;
+}
+
+/* Dropdown multi-select */
+.student-dropdown {
+  width: 100%;
+  min-height: 80px;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Labels */
+.slot-card p {
+  font-weight: 600;
+  margin: 10px 0 5px 0;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .scheduler-container {
+    padding: 15px;
+  }
+
+  .slot-card {
+    padding: 10px 15px;
+  }
+
+  .add-btn,
+  .remove-btn,
+  .save-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}

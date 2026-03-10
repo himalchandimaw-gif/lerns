@@ -1,0 +1,50 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Student {
+  id     Int     @id @default(autoincrement())
+  name   String
+  age    Int
+  email  String  @unique
+  nic    String
+  tp     String
+  status Boolean
+}
+
+model Progress {
+  id               Int     @id @default(autoincrement())
+  Doc              Boolean
+  exam_lec         Boolean
+  model_ex         Boolean
+  exam             Boolean
+  larner_permit    Boolean
+  steering_wh      Boolean
+  parts_of_v       Boolean
+  clutch_blnc      Boolean
+  gier_ch          Boolean
+  town_aria        Boolean
+  riverse          Boolean
+  training_on_yard Boolean
+  find_tuning      Boolean
+  training_done    Boolean
+  triel            Boolean
+}
+
+model NextDate {
+  id   Int      @id @default(autoincrement())
+  next DateTime
+  last DateTime
+}

@@ -1,0 +1,21 @@
+
+
+  
+
+
+  .menu-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(229, 225, 225);
+    padding: 10px;
+    transition: all 0.3s ease;
+    display: block;
+
+  }
+
+
+  .menu-link.active {
+    font-weight: bold;
+    color: #3498db; /* Highlighted color */
+    border-bottom: 2px solid #3498db;
+     }

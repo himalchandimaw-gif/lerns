@@ -1,0 +1,51 @@
+.payment-tracker {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px 0;
+  background: #fff;
+}
+
+.installments {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.installment-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.installment-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.installment-btn.paid {
+  background: #4caf50;
+  color: #fff;
+}
+
+.installment-btn.unpaid {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.cancel-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #e53935;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background: #c62828;
+}

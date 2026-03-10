@@ -1,0 +1,29 @@
+.package-selector {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.package-selector label {
+  font-weight: 600;
+  color: #333;
+}
+
+.package-selector select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.package-selector select:focus {
+  border-color: #0070f3;
+}
+
+.package-selector p {
+  font-size: 12px;
+  color: #555;
+}

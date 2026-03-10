@@ -1,0 +1,70 @@
+// Generator: creates Prisma Client
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Datasource: PostgreSQL database
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Student table
+model Student {
+  id               Int        @id @default(autoincrement())
+  name             String
+  age              Int        @default(0)
+  email            String     @default("")
+  nic              String     @unique
+  tp               String     @default("")
+  status           Boolean    @default(true)
+  
+  // Progress tracking
+  doc              Boolean    @default(false)
+  exam_lec         Boolean    @default(false)
+  exam             Boolean    @default(false)
+  triel            Boolean    @default(false)
+  trielDate        DateTime?  // Date of trial, optional
+
+  registrationDate DateTime   @default(now())
+  package          String?    // optional package info
+
+  // Relations
+  payments         Payment[]
+  nextDate         NextDate?
+  schedules        Schedule[]
+}
+
+// Next scheduled date table
+model NextDate {
+  id       Int      @id @default(autoincrement())
+  nic      String   @unique
+  next     DateTime
+  last     DateTime?
+  student  Student  @relation(fields: [nic], references: [nic])
+}
+
+// Payment table
+model Payment {
+  id              Int      @id @default(autoincrement())
+  nic             String
+  installment     Int
+  amount          Float
+  paidAt          DateTime @default(now())
+  whatsappStatus  String   @default("pending") // <-- NEW FIELD
+
+  student     Student  @relation(fields: [nic], references: [nic])
+
+  @@unique([nic, installment])
+}
+
+// Schedule table
+model Schedule {
+  id         Int      @id @default(autoincrement())
+  date       DateTime
+  slot       Int      // 1-9 (maps to your time slots)
+  studentNic String
+  student    Student  @relation(fields: [studentNic], references: [nic])
+
+  @@unique([date, slot, studentNic])
+}

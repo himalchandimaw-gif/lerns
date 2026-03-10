@@ -1,0 +1,110 @@
+/* Base Calendar Container */
+.calendar-container {
+  max-width: 350px;
+  margin-left: 10rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(75, 129, 238, 0.1);
+  background: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header */
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.react-calendar__navigation button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+
+.react-calendar__navigation button:hover {
+  color: #0070f3;
+}
+
+/* Weekday Labels */
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  font-weight: 600;
+  color: #555;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+ 
+}
+
+/* Dates */
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 0.75rem 0;
+  text-align: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.75rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+/* Hover */
+.react-calendar__tile:hover {
+  background-color: #f0f4ff;
+  color: #0070f3;
+}
+
+/* Active (selected date) */
+.react-calendar__tile--active {
+  background-color: #0070f3 !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+/* Today Highlight */
+.today-highlight {
+  background-color: #ffe58f !important;
+  color: #222 !important;
+  font-weight: bold;
+  border: 2px solid #fadb14;
+}
+
+/* Remove default now color */
+.react-calendar__tile--now {
+  background: none !important;
+  color: inherit;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .calendar-container {
+    max-width: 95%;
+    padding: 1rem 0.5rem;
+  }
+}
+
+
+
+.today-highlight {
+  background-color: #0070f3 !important;
+  color: rgb(238, 239, 241) !important;
+ 
+  font-weight: bold;
+}
+
+/* Remove underline from weekday names */
+.react-calendar__month-view__weekdays abbr {
+  text-decoration: none;
+  border: none;
+}
+
+.react-calendar {
+  border: none !important; /* Remove default border */
+  padding: 0.5rem; /* Optional: add inner padding */
+}

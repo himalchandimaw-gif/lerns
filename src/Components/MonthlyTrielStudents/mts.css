@@ -1,0 +1,49 @@
+.monthly-triel-students {
+  padding: 20px;
+  background: #f9fafb; /* light gray background */
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.monthly-triel-students h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #1f2937; /* dark gray */
+  border-left: 4px solid #2563eb; /* blue accent */
+  padding-left: 10px;
+}
+
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.student-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.student-card strong {
+  color: #111827; /* near black */
+  font-size: 1.1rem;
+}
+
+.student-card p {
+  margin: 6px 0;
+  color: #374151; /* medium gray */
+}
+
+.student-card .trial-date {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #2563eb; /* blue */
+}
