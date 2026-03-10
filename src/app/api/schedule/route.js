@@ -20,7 +20,7 @@ export async function GET(req) {
     return new Response(JSON.stringify(schedules), { status: 200 });
   } catch (err) {
     console.error(err);
-    return new Response(JSON.stringify({ error: "Failed to fetch schedule" }), { status: 500 });
+    return new Response(JSON.stringify({ error: err.message }), { status: 500 });
   }
 }
 

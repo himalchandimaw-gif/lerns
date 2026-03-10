@@ -27,8 +27,9 @@ export default function ScheduleList() {
   const fetchSchedule = async () => {
     try {
       const res = await fetch(`/api/schedule?date=${date}`);
+      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
       const data = await res.json();
-      setSchedule(data);
+      setSchedule(Array.isArray(data) ? data : []);
     } catch (err) {
       console.error("Failed to fetch schedule", err);
       setSchedule([]);

@@ -22,7 +22,7 @@ export async function GET() {
   } catch (error) {
     console.error("Error fetching this month trial students:", error);
     return new Response(
-      JSON.stringify({ error: "Failed to fetch students" }),
+      JSON.stringify({ error: error.message }),
       { status: 500 }
     );
   }
