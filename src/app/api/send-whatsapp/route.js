@@ -1,5 +1,5 @@
 // src/app/api/send-whatsapp/route.js
-import { sendWhatsapp } from "@/lib/whatsappServer";
+import { sendWhatsapp } from "../../../../lib/whatsappServer";
 
 export async function POST(req) {
   try {

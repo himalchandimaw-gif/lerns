@@ -7,7 +7,7 @@ import styles from './st.css';
 import Tabc from '@/Components/tab/Tabc' // adjust the path based on your file structure
 import StudentRegistrationForm from '@/Components/Application/StudentRegistrationForm';
 import StudentList from '@/Components/studentr/StudentList';
-import StudentList2 from '@/Components/StudentList2/StudentList2';
+import StudentList2 from '@/Components/Studentlist2/StudentList2';
 
 
 
